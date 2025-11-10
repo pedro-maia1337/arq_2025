@@ -1,0 +1,101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% Template de Artigo Adaptado para Trabalho de Diplomação do ICEI %%%%%%%%%%%%%%%%%%%%%%%%
+%% codificação UTF-8 - Abntex - Latex -  							     %%
+%% Autor:    Fábio Leandro Rodrigues Cordeiro  (fabioleandro@pucminas.br)                            %% 
+%% Co-autores: Prof. João Paulo Domingos Silva, Harison da Silva e Anderson Carvalho		     %%
+%% Revisores normas NBR (Padrão PUC Minas): Helenice Rego Cunha e Prof. Theldo Cruz                  %%
+%% Versão: 1.1     18 de dezembro 2015                                                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Definição e caracterização} 
+
+   \subsection{ASIC (Application Specific IC)} 
+	ASICs é um circuito integrado que é projetado sob medida para aplicações com propósitos específicos. São circuitos implementados para tarefas específicas em funções bem definidas. Essa especialização permite desempenho aprimorado, otimização do uso de espaço no dispositivo porém tem um alto custo. ASICs são amplamente utilizados na eletrônica, de smartphones a dispositivos médicos.
+
+   \subsection{ASSP (Application-Specific Standard Product)} 
+   O ASSP também é um circuito integrado que é projetado sob medida para aplicações com propósitos específicos, porém utilizado em funções como codecs de áudio/vídeo, links de comunicação (como USB ou Bluetooth). Ao contrário de um ASICs, um ASSP não é projetado para um único cliente, mas sim um produto padronizado disponibilizado para um mercado amplo.
+
+   \subsection{SPLD (Simple Programmable Logic Devices) } 
+   Os SPLDs são formas mais simples e mais baratas de dispositivos lógicos. Eles são utilizados em placas para substituir componentes lógicos (portas AND, OR, NOT). São dispositivos que podem ser apagados e reprogramados por meio de software em vez de alterar o hardware por conta dessa característica, utilizam memórias não voláteis como EPROM, EEPROM.
+
+   \subsection{CPLD (Complex Programmable Logic Device)} 
+   Dispositivos Lógicos Programáveis Complexos (CPLDs) são circuitos integrados digitais com células lógicas programáveis e interconexões usadas para implementar uma variedade de funções lógicas digitais para uma ampla gama de aplicações. O princípio básico dos CPLDs é implementar funções lógicas digitais por meio de unidades lógicas programáveis e interconexões programáveis. Essas unidades lógicas podem ser configuradas como uma variedade de portas lógicas e flip-flops, e a rede de interconexão permite que essas unidades lógicas sejam interconectadas para realizar a função de circuito desejada. OS CPLDs utilizam memória não volátil 
+
+   \subsection{SoC (System on a Chip)}
+   Um SoC (Sistema em um Chip) é um circuito integrado único que contém todos os componentes essenciais de um sistema eletrônico, como CPU, memória e portas I/O. Fazendo essa integração em um único chip, os dispositivos ficam mais compactos, energeticamente eficientes e rápidos. São bastante utilizados em dispositivos móveis e dispositivos IoT. 
+
+   \subsection{FPGA (Field Programmable Gate Array)} 
+   Uma FPGA (matriz de portas programáveis em campo) é um circuito integrado que é projetado para ser configurado pelo usuário, diferentamente de circuitos integrados específicos como os ASICs, esse circuito é programável para atender diferentes propósitos sem a necessidade de modificar ou alterar fisicamente o hardware.
+
+\section{\esp DIFERENCIAÇÃO (PROM, PLA e PAL)}
+
+\begin{table}[ht]
+    \centering
+    \caption{Diferenças entre PROM, PLA e PAL}
+    \begin{tabular}{|m{4.2cm}|m{4.2cm}|m{4.2cm}|}
+        \hline
+        \textbf{PROM (Memória Somente Leitura Programável)} & \textbf{PLA (Matriz Lógica Programável)} & \textbf{PAL (Lógica de Matriz Programável)} \\
+        \hline
+        Baseada em memória (armazena dados/instruções). & Usa portas AND e OR. & Usa portas AND e OR. \\
+        \hline
+        O usuário insere dados, que não podem ser alterados após a inserção. & Ambas as portas AND e OR são programáveis. & A porta AND é programável, mas a porta OR é fixa (não programável). \\
+        \hline
+        Armazenamento de dados que não podem ser alterados após a programação (memória somente leitura). & Tarefas de decodificação e dados altamente personalizável. & Funções lógicas diversas, oferecendo segurança e confiabilidade. \\
+        \hline
+        Permite a inserção de dados específicos pelo usuário. & Altamente personalizável, pois ambas as matrizes são programáveis. & Menos flexível que o PLA, pois a matriz OR é fixa. \\
+        \hline
+        Simples e fácil de usar & Mais cara e mais complexa que PROM e PAL & Simples e fácil de usar \\
+        \hline
+    \end{tabular}
+    \label{tab:diferencas_spls}
+\end{table}
+
+   
+\section{\esp DIFERENCIAÇÃO (CPLD FPGA)}
+
+\renewcommand{\arraystretch}{2.0} 
+
+\begin{table}[ht]
+    \centering
+    \caption{Diferenças entre CPLD e FPGA}
+    \begin{tabular}{|m{5.5cm}|m{5.5cm}|}
+        \hline
+        \textbf{CPLD (Complex Programmable Logic Device)} & \textbf{FPGA (Field-Programmable Gate Array)} \\
+        \hline
+        Arquitetura centralizada. & Arquitetura distribuída. \\
+        \hline
+        Blocos Lógicos: Macrocélulas com lógica PAL. & Blocos Lógicos: Blocos Lógicos Configuráveis (CLBs). \\
+        \hline
+        Menos flexível. & Altamente flexível. \\
+        \hline
+        Menos custoso. & Mais custoso. \\
+        \hline
+        Design fixo e mais simples para lógica combinacional. & Altamente configuráveis e suportam lógica combinacional e sequencial. \\
+        \hline
+        Consomem menos energia, custam menos e inicializam instantaneamente. & Exigem mais energia e memória de configuração externa. \\
+        \hline
+    \end{tabular}
+    \label{tab:diferencas_cpld_fpga_adaptada_espacada}
+\end{table}
+
+\nocite{artigo01}
+\nocite{artigo02}
+\nocite{artigo03}
+\nocite{video01}
+\nocite{video02}
+\nocite{video03}
+\nocite{video04}
+\nocite{video05}
+\nocite{video06}
+\nocite{site01}
+\nocite{site02}
+\nocite{site03}
+\nocite{site04}
+\nocite{site05}
+\nocite{site06}
+
+
+
+% \subsection{\esp Trabalhos futuros}
+% 
+% Sugestões de estudos posteriores são ser adicionados subseção deste capítulo de conclusão.

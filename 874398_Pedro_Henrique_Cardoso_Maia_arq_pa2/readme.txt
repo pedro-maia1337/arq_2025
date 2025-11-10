@@ -1,0 +1,1 @@
+a máquina de estado de moore não está retornando a saida corretamente, provavelmente as ligações pra mudação de estado estão incorretas

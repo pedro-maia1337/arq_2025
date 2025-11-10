@@ -1,0 +1,62 @@
+1. Definição 
+
+1.1) ASICs (Application Specific IC)
+	ASICs é um circuito integrado que é projetado sob medida para aplicações com propósitos específicos. São circuitos implementados para tarefas específicas em funções bem definidas. Essa especialização permite desempenho aprimorado, otimização do uso de espaço no dispositivo porém tem um alto custo. ASICs são amplamente utilizados na eletrônica, de smartphones a dispositivos médicos.
+
+1.2) ASSP (Application-Specific Standard Product)
+	O ASSP também é um circuito integrado que é projetado sob medida para aplicações com propósitos específicos, porém utilizado em funções como codecs de áudio/vídeo, links de comunicação (como USB ou Bluetooth). Ao contrário de um ASICs, um ASSP não é projetado para um único cliente, mas sim um produto padronizado disponibilizado para um mercado amplo.
+
+1.3) SPLD (Simple Programmable Logic Devices) 
+	Os SPLDs são formas mais simples e mais baratas de dispositivos lógicos. Eles são utilizados em placas para substituir componentes lógicos (portas AND, OR, NOT). São dispositivos que podem ser apagados e reprogramados por meio de software em vez de alterar o hardware por conta dessa característica, utilizam memórias não voláteis como EPROM, EEPROM.
+
+1.4) CPLD (Complex Programmable Logic Device)
+	Dispositivos Lógicos Programáveis ​​Complexos (CPLDs) são circuitos integrados digitais com células lógicas programáveis ​​e interconexões usadas para implementar uma variedade de funções lógicas digitais para uma ampla gama de aplicações. O princípio básico dos CPLDs é implementar funções lógicas digitais por meio de unidades lógicas programáveis ​​e interconexões programáveis. Essas unidades lógicas podem ser configuradas como uma variedade de portas lógicas e flip-flops, e a rede de interconexão permite que essas unidades lógicas sejam interconectadas para realizar a função de circuito desejada. OS CPLDs utilizam memória não volátil 
+
+1.5) SoC (System on a Chip)
+	Um SoC (Sistema em um Chip) é um circuito integrado único que contém todos os componentes essenciais de um sistema eletrônico, como CPU, memória e portas I/O. Fazendo essa integração em um único chip, os dispositivos ficam mais compactos, energeticamente eficientes e rápidos. São bastante utilizados em dispositivos móveis e dispositivos IoT. 
+
+1.6) FPGA 
+	Uma FPGA é um circuito integrado que é projetado para ser configurado pelo usuário, diferentamente de circuitos integrados específicos como os ASICs, esse circuito é programável para atender diferentes propósitos sem a necessidade de modificar ou alterar fisicamente o hardware.
+
+2)
+
+PROM
+	Baseada em memória(armazena dados/instruções).
+	O usuário insere dados,que não podem ser alterados após a inserção
+	Armazenamento de da-dos que não podem ser alterados após a programação (memória somente leitura)
+	Permite a inserção de dados específicos pelo usuário.
+	Simples e fácil de usar
+
+PLA
+	Usa portas AND e OR.
+	Ambas as portas AND e OR são programáveis.
+	Tarefas de decodificação e dados, altamente personalizável.
+	Altamente personalizável, pois ambas as matrizes são programáveis.
+	Mais cara e mais complexa que PROM e PAL
+
+PAL
+
+	Usa portas AND e OR
+	A porta AND é programável, mas a porta OR é fixa (não programável).
+	Funções lógicas diversas, oferecendo segurança e confiabilidade.
+	Menos flexível que oPLA, pois a matriz OR é fixa.
+	Simples e fácil de usar
+
+
+3)
+
+CPLD
+Arquiterura centralizada
+Macrocélulas com lógica PAL
+Menos flexível
+Menos custoso
+design fixo e mais simples para lógica combinacional
+Consomem menos energia, custam menos e inicializam instantaneamente.
+
+FPGA
+Arquitetura distruibuída
+Blocos Lógicos Configuráveis ​​(CLBs)
+Altamente flexível
+Mais custoso
+São altamente configuráveis ​​e suportam lógica combinacional e sequencial. 
+Exigem mais energia e memória de configuração externa.

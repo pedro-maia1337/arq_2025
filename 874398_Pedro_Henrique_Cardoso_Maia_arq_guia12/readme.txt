@@ -1,0 +1,1 @@
+Boa tarde Theldo, segue a recuperação sendo entregue pelo guia 12, devido eu ter esquecido de enviar anteriormente :(
