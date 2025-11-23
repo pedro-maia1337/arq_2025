@@ -1,0 +1,27 @@
+// Guia_1505.txt
+// 874398 - Pedro Henrique Cardoso Maia
+//
+//Assembler
+//mult por 4
+LDA 8000H      
+ADD A          
+ADD A          
+MOV B, A      
+
+//divide
+LDA 8001H     
+RAR            ; instrução pra fazer deslocamento ?
+MOV C, A       ; divide 
+
+//Soma 
+MOV A, B  
+ADD C      
+
+STA 8002H      ; armezena
+HLT
+
+; Memory
+; 8000 : 05
+; 8001 : 0A
+; 8002 : resultado
+//Validar nos registers

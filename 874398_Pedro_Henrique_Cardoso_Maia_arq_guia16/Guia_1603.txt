@@ -1,0 +1,45 @@
+// Guia_1603.txt
+// 874398 - Pedro Henrique Cardoso Maia
+//Assembler
+JMP MAIN
+
+F_MOD:
+    MOV D,B  
+    MOV E,C    
+    MOV A,E      
+    ORA A        ; | OR verifica divisor 0 
+    MOV A,D    
+    CMP E      
+    JC MOD_END   ; verifica dividendo < divisor
+    
+    MOV B,D      
+    
+MOD_LOOP:
+    MOV A,B   
+   
+    SUB E        
+    JC MOD_END  
+    MOV B,A      
+    JMP MOD_LOOP
+
+MOD_END:
+    MOV A,B     
+    RET
+
+MAIN:
+    LXI H,8000   
+
+    MOV B,M      
+    INX H        
+    MOV C,M      
+    CALL F_MOD   ; Chama função
+    
+    STA 8002     
+    HLT
+
+END
+; Memory
+; 8000 : 100
+; 8001 : 10
+; 8003 : resultado
+//Validar nos registers

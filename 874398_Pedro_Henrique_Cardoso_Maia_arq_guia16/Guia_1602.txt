@@ -1,0 +1,52 @@
+// Guia_1602.txt
+// 874398 - Pedro Henrique Cardoso Maia
+//Assembler
+//Mesma lógica de loop
+
+JMP MAIN
+
+F_DIV:
+    MVI A,00     
+    MOV D,B      
+    MOV E,C      
+    MOV A,E      
+    ORA A        
+    JZ DIV_END   ; = 0, retorna
+    MOV A,D      
+    CMP E        
+    JC DIV_END   ;  < 0, retorna
+    MVI A,00     
+    MOV B,D     
+    
+DIV_LOOP:
+    MOV A,B      ; 
+    SUB E        ; 
+    JC DIV_END   ; cond
+    
+    MOV B,A      
+    INR A        
+    MOV C,A      
+    MOV A,C      
+    INR A       
+    MOV C,A      
+    JMP DIV_LOOP ; -
+    
+DIV_END:
+    MOV A,C      
+    RET
+
+MAIN:
+    LXI H,8000  
+    MOV B,M     
+    INX H 
+    MOV C,M    
+    CALL F_DIV  
+    STA 8002    
+    HLT
+
+END
+; Memory
+; 8000 : 08
+; 8001 : 02
+; 8003 : resultado
+//Validar nos registers

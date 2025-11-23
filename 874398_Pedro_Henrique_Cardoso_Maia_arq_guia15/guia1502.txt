@@ -1,0 +1,59 @@
+// Guia_1502.txt
+// 874398 - Pedro Henrique Cardoso Maia
+//
+//Assembler
+
+//dado01 - dado02
+LHLD 8000H   
+XCHG            
+LHLD 8002H  	; Carrega    
+
+MOV A, E 	; Opera parte baixa       
+SUB L 		; Subtrai
+MOV E, A	
+MOV A, D  	; Opera parte alta        
+SBB H		
+MOV D, A        
+
+//+dado03
+LHLD 8004H      
+
+MOV A, E     
+ADD L
+MOV E, A
+MOV A, D      
+ADC H
+MOV D, A       
+
+//-dado04
+LHLD 8006H    
+
+MOV A, E        
+SUB L
+MOV E, A
+MOV A, D        
+SBB H
+MOV D, A  
+
+//Armazena resultado
+XCHG            
+SHLD 8008H      ; Armazena dado05 (16 bits
+HLT
+
+; Memory
+//Precisar armazenar a parte baixa e alta do número 
+; 8000 : 23
+; 8001 : 01
+; 8002 : 45
+; 8003 : 00 
+; 8004 : 00 
+; 8005 : 01
+; 8006 : 20
+; 8007 : 00
+; 8008 : BE (RESULTADO)
+; 8009 : 01 (RESULTADO)
+//Validar nos registers
+291 - 69 + 256 - 32 = 446
+01BEH (446)
+
+

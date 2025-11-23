@@ -1,0 +1,25 @@
+// Guia_1507.txt
+// 874398 - Pedro Henrique Cardoso Maia
+//
+//Assembler
+;dado01 % 2 
+LDA 8000H      
+ANI 01H        ; guarda o resto ? 
+MOV B, A       
+
+LDA 8001H      
+RAR            ; shift right
+RAR            ; shift right 
+ANI 3FH        ; MSB
+MOV C, A        
+
+MOV A, B        
+ADD C           
+
+STA 8002H      
+HLT
+; Memory
+; 8000 : 09
+; 8001 : 09
+; 8002 : resultado
+//Validar nos registers

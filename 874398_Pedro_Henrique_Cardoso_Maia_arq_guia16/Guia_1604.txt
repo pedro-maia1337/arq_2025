@@ -1,0 +1,38 @@
+// Guia_1604.txt
+// 874398 - Pedro Henrique Cardoso Maia
+//Assembler
+JMP MAIN
+
+MIN:
+    MOV A,M      
+    DCR B        
+    RZ          ; valida tamanho
+    INX H       ; pula pro prox
+    
+MIN_LOOP:
+    MOV C,M     
+    CMP C        
+    JC PROX ;    ; valida menor
+    
+    MOV A,C      ; atualiza menor valor
+    
+PROX:
+    INX H        ; prox
+    DCR B        ; --
+    JNZ MIN_LOOP ; COND DE PARADA
+    RET
+
+MAIN:
+    ; Iniciar Array ? 
+    
+    LXI H,8000   
+    MVI B,05     
+    
+    CALL MIN 
+    
+    STA 8006  
+    HLT
+
+END
+; Memory
+//Validar nos registers

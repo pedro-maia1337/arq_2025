@@ -1,0 +1,33 @@
+// Guia_1506.txt
+// 874398 - Pedro Henrique Cardoso Maia
+//
+//Assembler
+//Prioridade
+; ADD A (*) 
+; RAR 	(/)
+; ADD C (+)
+; SUB 	(-)
+
+;4 × dado02
+LDA 8001H      
+ADD A          
+ADD A         
+MOV B, A       
+
+;(dado01 - 4×dado02)
+LDA 8000H      
+SUB B          
+MOV C, A     
+
+;Calcula 3 × () 
+MOV B, A     
+ADD A         
+ADD B          
+
+STA 8002H      
+HLT
+; Memory
+; 8000 : 05
+; 8001 : 0A
+; 8002 : resultado
+//Validar nos registers

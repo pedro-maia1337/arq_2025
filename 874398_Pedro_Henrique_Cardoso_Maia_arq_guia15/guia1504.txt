@@ -1,0 +1,27 @@
+// Guia_1504.txt
+// 874398 - Pedro Henrique Cardoso Maia
+//
+//Assembler
+//dobro = acumulador com ele mesmo
+//x * 3 = acumulador + acumulador + numero
+LDA 8000H      
+MOV B, A       
+ADD A          ; dado01 + dado01
+MOV C, A       ; 2 × dado01
+
+LDA 8001H      
+MOV D, A       
+ADD A          
+ADD D          ; 2× dado02 + dado02 = x * 3
+MOV E, A        
+
+MOV A, C       
+SUB E          ; Calcula expressao
+
+STA 8002H      ; Armazena
+HLT
+; Memory
+; 8000 : 08
+; 8001 : 03
+; 8002 : resultado
+//Validar nos registers

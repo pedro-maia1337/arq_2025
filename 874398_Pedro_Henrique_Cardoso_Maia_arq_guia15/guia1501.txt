@@ -1,0 +1,20 @@
+// Guia_1501.txt
+// 874398 - Pedro Henrique Cardoso Maia
+//
+//Assembler
+ LXI H,8000H ; Aponta
+ MOV A,M ; Carrega
+ INX H ; Acrescenta endereço ? 
+ SUB M ; Subtrai
+ INX H 
+ SUB M 
+ INX H 
+ SUB M
+ STA 8003H //Armazena resultado
+ HLT
+; Memory
+; 8000 : 08
+; 8001 : 02
+; 8002 : 03
+; 8003 : resultado
+//Validar nos registers

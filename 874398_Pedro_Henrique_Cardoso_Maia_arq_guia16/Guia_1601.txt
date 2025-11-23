@@ -1,0 +1,37 @@
+// Guia_1601.txt
+// 874398 - Pedro Henrique Cardoso Maia
+//Assembler
+
+JMP MAIN
+
+F_MULT:
+    MVI A,00     
+    MOV D,B      
+    MOV E,C    
+    ORA D        ; Verifica se é zero
+    JZ MULT_END  ; Cond 16bits
+    MVI A,00    
+    
+MULT_LOOP:
+    ADD D       
+    DCR E     	  ; - 1
+    JNZ MULT_LOOP ; = 0 para
+    
+MULT_END:
+    RET          ; Retorna
+
+MAIN:
+    LXI H,8000   
+    MOV B,M      
+    INX H       
+    MOV C,M      
+    CALL F_MULT  // Chama Funnção 
+    STA 8002     ; Armazena resultado
+    HLT
+
+END:
+; Memory
+; 8000 : 08
+; 8001 : 02
+; 8003 : resultado
+//Validar nos registers

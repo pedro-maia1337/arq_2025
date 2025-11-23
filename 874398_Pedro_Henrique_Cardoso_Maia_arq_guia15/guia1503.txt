@@ -1,0 +1,39 @@
+// Guia_1503.txt
+// 874398 - Pedro Henrique Cardoso Maia
+//
+//Assembler
+//Carrega dados BCD
+LDA 8000H      ; A = dado01
+MOV B, A       ; B = dado01
+
+LDA 8001H      ; A = dado02
+MOV C, A       ; C = dado02
+
+//dado01 - dado02
+MOV A, B   
+SUB C         
+DAA            	; Ajuste decimal para subtração
+MOV B, A      
+
+//+dado03
+LDA 8002H    
+ADD B         
+DAA           
+MOV B, A    
+
+//- dado04
+LDA 8003H
+MOV C, A     
+MOV A, B       
+SUB C          
+DAA            	; Ajuste decimal para subtração
+
+STA 8004H  	; Armazena resultado
+HLT
+; Memory
+; 8000 : 40
+; 8001 : 30
+; 8002 : 15
+; 8003 : 12
+; 8004 : resultado
+//Validar nos registers

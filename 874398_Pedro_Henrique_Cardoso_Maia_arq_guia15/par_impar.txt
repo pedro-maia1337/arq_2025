@@ -1,0 +1,19 @@
+// 874398 - Pedro Henrique Cardoso Maia
+//
+//Assembler
+//brincando com módulo 
+
+LDA 8000H      
+ANI 01H      
+JZ EH_PAR      ; resto = 0, par
+
+; É ímpar
+MVI A, 01H     ; ímpar
+STA 8001H      ; Armazena resultado
+JMP FIM
+
+EH_PAR:
+MVI A, 00H     ; par
+STA 8001H      ; Armazena resultado
+
+HLT
