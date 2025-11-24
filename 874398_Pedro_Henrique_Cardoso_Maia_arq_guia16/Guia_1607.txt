@@ -1,0 +1,6 @@
+// Guia_1607.txt
+// 874398 - Pedro Henrique Cardoso Maia
+//Assembler
+Teria que usar chamada de pilha ? 
+; Memory
+//Validar nos registers

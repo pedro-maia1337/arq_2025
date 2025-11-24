@@ -1,0 +1,36 @@
+// Guia_1606.txt
+// 874398 - Pedro Henrique Cardoso Maia
+//Assembler
+
+JMP MAIN
+
+QUADRADO:
+    MVI A,00     
+    MOV C,B     
+    MVI D,01    
+    MOV A,C      
+    ORA A
+    RZ   
+    MVI A,00     
+  
+//Soma os ímpares como na dica  
+QD_LOOP:
+    ADD D       
+    INR D       
+    INR D        
+    DCR C        
+    JNZ QD_LOOP  
+    RET
+
+MAIN:
+    MVI A,05  	 ;5 de exemplo
+    STA 0050
+    LXI H,0050
+    MOV B,M      
+    CALL QUADRADO 
+    
+    STA 0051    
+    HLT
+END
+; Memory
+//Validar nos registers
